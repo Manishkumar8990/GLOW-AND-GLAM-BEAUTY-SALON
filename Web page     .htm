@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Glam Beauty Salon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #fff;
+        }
+
+        .header {
+            background: linear-gradient(rgba(188, 54, 54, 0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            width: 100%;
+        }
+
+        nav {
+            background: #0fdf13;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .horizontal-grid {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 2rem;
+            flex-wrap: nowrap; /* Ensures all cards are in a single row */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 350px; /* Ensures cards are evenly sized */
+            text-align: center;
+        }
+
+        .service-card {
+            text-align: center;
+        }
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .schedule th, .schedule td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .schedule th {
+            background: #f5f5f5;
+        }
+
+        .membership-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: #333;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ff4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff2222;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .grid, .horizontal-grid {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#timing">Salon Timing</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#review">Client Review</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <header class="header" id="home">
+        <h1>Glow & Glam Beauty Salon</h1>
+        <p>Enhancing Your Natural Beauty</p>
+        <a href="#membership" class="btn">Join Now</a>
+    </header>
+    
+    <section class="section" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="horizontal-grid">
+                <div class="card service-card">
+                    <h3>Hair Styling</h3>
+                    <p>Custom haircuts, blow-drying, and coloring services.</p>
+                </div>
+                <div class="card service-card">
+                    <h3>Facials</h3>
+                    <p>Rejuvenating facials for glowing skin.</p>
+                </div>
+                <div class="card service-card">
+                    <h3>Manicure & Pedicure</h3>
+                    <p>Luxurious hand and foot care treatments.</p>
+                </div>
+                <div class="card service-card">
+                    <h3>Makeup</h3>
+                    <p>Professional makeup for all occasions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="timing" style="background: #f9f9f9;">
+        <div class="container">
+            <h2>Salon Timings</h2>
+            <table class="schedule">
+                <tr>
+                    <th>Service</th>
+                    <th>Timing</th>
+                </tr>
+                <tr>
+                    <td>Hair Styling</td>
+                    <td>10:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Facials</td>
+                    <td>11:00 AM - 7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Manicure & Pedicure</td>
+                    <td>12:00 PM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Makeup</td>
+                    <td>10:00 AM - 9:00 PM</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" id="about" style="background: #f9f9f9;">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Glow Beauty Salon is dedicated to making you look and feel your best. With experienced professionals and top-notch services, we bring out the beauty in you.</p>
+            <p>Our journey began with a passion for beauty and wellness. Over the years, we have built a reputation for exceptional service and client satisfaction. Our salon is equipped with state-of-the-art facilities, and our team continuously updates their skills to stay ahead of industry trends.</p>
+            <p>We pride ourselves on creating a warm, welcoming environment where clients can relax and enjoy a moment of self-care. Whether you’re here for a quick touch-up or a full transformation, our goal is to ensure you leave feeling confident and radiant.</p>
+        </div>
+    </section>
+    
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="horizontal-grid">
+                <div class="card testimonial-card">
+                    <p>"The facial treatments are amazing. My skin has become better!"</p>
+                    <p>- Gaurav Verma</p>
+                </div>
+                <div class="card testimonial-card">
+                    <p>"The stylists here are top-notch. I always leave feeling fabulous!"</p>
+                    <p>- Ayush Kumar</p>
+                </div>
+                <div class="card testimonial-card">
+                    <p>"Best salon experience ever! Highly recommend their services."</p>
+                    <p>- Aman Solanki</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="membership">
+        <div class="container">
+            <h2>Membership Plans</h2>
+            <div class="horizontal-grid">
+                <div class="card membership-card">
+                    <h3>Basic</h3>
+                    <div class="price">₹599/mo</div>
+                    <ul>
+                        <li>Basic Haircuts</li>
+                        <li>10% Off on Facials</li>
+                    </ul>
+                    <a href="#" class="btn">Choose Plan</a>
+                </div>
+                <div class="card membership-card">
+                    <h3>Premium</h3>
+                    <div class="price">₹899/mo</div>
+                    <ul>
+                        <li>All Basic Features</li>
+                        <li>20% Off on All Services</li>
+                    </ul>
+                    <a href="#" class="btn">Choose Plan</a>
+                </div>
+                <div class="card membership-card">
+                    <h3>Elite</h3>
+                    <div class="price">₹1499/mo</div>
+                    <ul>
+                        <li>All Premium Features</li>
+                        <li>Free Monthly Facials</li>
+                        <li>Priority Booking</li>
+                    </ul>
+                    <a href="#" class="btn">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact" style="background: #f9f9f9;">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Address: 123 Beauty Lane, Mumbai City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: glowsalon@gmail.com</p>
+        </div>
+    </section>
+</body>
+</html>
